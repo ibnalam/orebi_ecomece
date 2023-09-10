@@ -23,6 +23,9 @@ import Test from "./components/Test"
 import Rootlayout from "./components/Rootlayout"
 import ErrorPage from "./Pages/ErrorPage"
 import Sign from "./Pages/Sign"
+import LogIn from "./Pages/LogIn"
+import Contucts from "./Pages/Contucts"
+import CheckOut from "./Pages/CheckOut"
 
 
 
@@ -42,7 +45,7 @@ const router = createBrowserRouter(
         >
     </Route>
     <Route
-        path="/ibnalam"
+        path="/shop"
         element={<Product />}
     >
   </Route>
@@ -51,6 +54,22 @@ const router = createBrowserRouter(
         element={<Sign />}
     >
   </Route>
+  <Route
+        path="/contucts"
+        element={<Contucts />}
+    >
+  </Route>
+  <Route
+        path="/log-in"
+        element={<LogIn />}
+    >
+  </Route>
+  <Route
+        path="/checkout"
+        element={<CheckOut/>}
+    >
+  </Route>
+  
   <Route
         path="/*"
         element={<ErrorPage />}
@@ -63,16 +82,8 @@ const router = createBrowserRouter(
 
 
     </Route>
-    <Route
-      path="/"
-      element={<Test />}
-      >
-    </Route>
-    <Route
-    path="/ibnalam"
-    element={<Product />}
-    >
-  </Route>
+
+
   </>
   )
 );

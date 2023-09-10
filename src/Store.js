@@ -1,8 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit'
-import counterslice from './slice/counterslice'
+// import counterslice from './slice/counterslice'
+import breadcrumbSlices from './slice/breadcrumbSlices'
+
 
 export default configureStore({
   reducer: {
-    ibnalam: counterslice
+    breadcrumbSlices: breadcrumbSlices,
   },
 })
+

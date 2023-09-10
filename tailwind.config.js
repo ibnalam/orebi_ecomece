@@ -9,19 +9,24 @@ export default {
       fontFamily: {
         dm: ['DM Sans']
     },
-    fontsize : {
+    fontSize: {
       39 : "39px",
       49 : "49px"
-      
     },
     colors: {
      ' offwhite': '#F0F0F0',
       'ash': '#ECE6E6',
+      'pera': '#767676',
+      'line': '#D8D8D8',
+      'input': '#767676'
     },
     maxWidth: {
       "container": '1604px',
       644 : "644px" ,
     },
+    width: {
+      '48': '48%'
+    }
   },
   },
   plugins: [],
