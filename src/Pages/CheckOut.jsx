@@ -1,13 +1,29 @@
 import Container from '../components/Container'
 import React from 'react'
+import Brabcrumb from '../components/Layout/Brabcrumb'
 import SubHeading from '../components/SubHeading'
 import Flex from '../components/Flex'
 import InputForm from '../components/InputForm'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import {FaAngleRight} from 'react-icons/fa'
 
 const CheckOut = () => {
+   
+
+    const pageName = useSelector((state)=>state.breadcrumbSlices.currentname)
+
+
   return (
     <Container>
         <SubHeading text="Checkout"/>
+        <Flex className="items-center">
+        <Link to={pageName == "Home" ? "/":`/${pageName.toLowerCase()}`}>
+            <p>{pageName}</p>
+        </Link>
+        <FaAngleRight className='mt-[5px]'/>
+        <p className='first-letter:uppercase'>{window.location.pathname.replace("/","")}</p>
+        </Flex>
         <Flex className="mt-[127px]">
         <p className='font-dm font-normal'>Have a coupon? </p>
         <p className='font-bold font-dm pl-2'> Click here to enter your code</p>

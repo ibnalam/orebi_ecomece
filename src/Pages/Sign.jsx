@@ -1,5 +1,6 @@
 import  Container  from '../components/Container'
 import React from 'react'
+import breadcrumbSlices from '../slice/breadcrumbSlices'
 import Brabcrumb from '../components/Layout/Brabcrumb'
 import SubHeading from '../components/SubHeading'
 import Flex from '../components/Flex'
@@ -7,6 +8,7 @@ import { useSelector } from 'react-redux'
 import InputForm from '../components/InputForm'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
+import {FaAngleRight} from 'react-icons/fa'
 
 
 
@@ -15,16 +17,17 @@ import Button from '../components/Button'
 const Sign = () => {
    
 
-    const pageName = useSelector((state => state.breadcrumbSlices.currentname))
+  const pageName = useSelector((state)=>state.breadcrumbSlices.currentname)
     
 
   return (
     
     <Container>
         <SubHeading text="Sign Up"/>
+        
         <Flex className="mt-3">
-        <Link className='mr-2' to={pageName == "" ? "/" : `/${pageName.toLowerCase()}`}> {pageName} </Link> / 
-        <p className='first-letter:uppercase ml-2' > {window.location.pathname.replace("/", "".replace("-", " "))}</p>
+        <Link className='mr-2' to={pageName == "Home" ? "/" : `/${pageName.toLowerCase()}`}> {pageName}</Link> <FaAngleRight className='mt-[5px]'/> 
+        <p className='first-letter:uppercase ml-2'>{window.location.pathname.replace("/","").replace("-"," ")}</p>
         </Flex>
 
         <p className='font-dm font-normal text-base max-w-644 my-36 text-pera'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>

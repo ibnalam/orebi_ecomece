@@ -7,8 +7,14 @@ import {GoTriangleDown} from 'react-icons/go'
 import {FaShoppingCart} from 'react-icons/fa'
 import {AiOutlineSearch} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+
 
 const Searchber = () => {
+    
+    let dispatch = useDispatch()
+
+     
     let handlebreadcrumb = (name)=>{
         console.log(name)
     }
@@ -16,8 +22,12 @@ const Searchber = () => {
     <section className='bg-ash py-10 mb-32'>
         <Container>
             <Flex>
-                <Flex className='w-1/5 items-center gap-x-2.5'>
-                    <FaBars />Shop by Category
+               <Flex className='w-1/5 items-center gap-x-2.5'>
+
+              
+                        <FaBars />
+
+                        Shop by Category
                 </Flex>
                 <div className='w-3/5 relative'>
                     <input className='w-full py-4 px-5' placeholder='search product'/>
@@ -30,7 +40,9 @@ const Searchber = () => {
                     </Link>
                     <GoTriangleDown/>
                     </Flex>
-                    <FaShoppingCart/>
+                    <Link onClick={()=> handlebreadcrumb("Checkout")} to="/checkout">
+                         <FaShoppingCart/>
+                    </Link>
                 </Flex>
             </Flex>
         </Container>

@@ -5,13 +5,21 @@ import Flex from '../components/Flex'
 import { Link } from 'react-router-dom'
 import InputForm from '../components/InputForm'
 import Button from '../components/Button'
+import { useSelector } from 'react-redux'
+import breadcrumbSlices from '../slice/breadcrumbSlices'
+import {FaAngleRight} from 'react-icons/fa'
 
 const LogIn = () => {
+  let pageName = useSelector((state)=>state.breadcrumbSlices.previousname)
   return (
     <Container>
         <SubHeading text="Login"/>
+
         <Flex className="mt-3">
-        <Link></Link> / 
+        <Link to={pageName == "Home" ? "/":`/${pageName.toLowerCase()}`}>
+            {pageName}
+          </Link>
+          <FaAngleRight className='mt-[5px]'/>
         <p className='first-letter:uppercase ml-2' > {window.location.pathname.replace("/", "".replace("-", " "))}</p>
         </Flex>
         <p className='font-dm font-normal text-base max-w-644 my-36 text-pera'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>

@@ -10,6 +10,8 @@ import { pageName } from '../../slice/breadcrumbSlices'
 
 const Navber = () => {
 
+    
+
     let dispatch = useDispatch()
 
 
@@ -37,7 +39,9 @@ const Navber = () => {
                 <Link onClick={()=> handlebreadcrumb("Contucts")} to="/Contucts">
                     <List text="Contucts"/>
                 </Link>
-                <List text="Journal"/>
+                <Link onClick={()=> handlebreadcrumb("Log In")} to="/log-in">
+                    <List text="log in"/>
+                </Link>
             </ul>
         </Flex>
     </Flex>
