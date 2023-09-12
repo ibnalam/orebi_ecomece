@@ -24,7 +24,6 @@ const Sign = () => {
     
     <Container>
         <SubHeading text="Sign Up"/>
-        
         <Flex className="mt-3">
         <Link className='mr-2' to={pageName == "Home" ? "/" : `/${pageName.toLowerCase()}`}> {pageName}</Link> <FaAngleRight className='mt-[5px]'/> 
         <p className='first-letter:uppercase ml-2'>{window.location.pathname.replace("/","").replace("-"," ")}</p>

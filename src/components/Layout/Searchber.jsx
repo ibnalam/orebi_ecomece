@@ -16,17 +16,16 @@ const Searchber = () => {
 
      
     let handlebreadcrumb = (name)=>{
+        //  dispatch(pageName(name))
         console.log(name)
     }
+    
   return (
     <section className='bg-ash py-10 mb-32'>
         <Container>
             <Flex>
                <Flex className='w-1/5 items-center gap-x-2.5'>
-
-              
                         <FaBars />
-
                         Shop by Category
                 </Flex>
                 <div className='w-3/5 relative'>

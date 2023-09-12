@@ -10,15 +10,17 @@ import breadcrumbSlices from '../slice/breadcrumbSlices'
 import {FaAngleRight} from 'react-icons/fa'
 
 const LogIn = () => {
+
   let pageName = useSelector((state)=>state.breadcrumbSlices.previousname)
+
   return (
     <Container>
         <SubHeading text="Login"/>
 
         <Flex className="mt-3">
-        <Link to={pageName == "Home" ? "/":`/${pageName.toLowerCase()}`}>
+        <Link to={pageName == "Home" ? "/" :`/${pageName.toLowerCase()}`}>
             {pageName}
-          </Link>
+        </Link>
           <FaAngleRight className='mt-[5px]'/>
         <p className='first-letter:uppercase ml-2' > {window.location.pathname.replace("/", "".replace("-", " "))}</p>
         </Flex>

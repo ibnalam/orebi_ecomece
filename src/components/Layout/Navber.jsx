@@ -16,10 +16,13 @@ const Navber = () => {
 
 
 
-    let handlebreadcrumb = (name)=>{
+   
+         
+       let handlebreadcrumb = (name)=>{
         dispatch(pageName(name))
-        console.log(name)
     }
+    
+       
   return (
    <nav className='py-8'>
     <Container>
@@ -39,7 +42,7 @@ const Navber = () => {
                 <Link onClick={()=> handlebreadcrumb("Contucts")} to="/Contucts">
                     <List text="Contucts"/>
                 </Link>
-                <Link onClick={()=> handlebreadcrumb("Log In")} to="/log-in">
+                <Link onClick={()=> handlebreadcrumb("log-in")} to="/log-in">
                     <List text="log in"/>
                 </Link>
             </ul>
