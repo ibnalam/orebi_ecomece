@@ -4,7 +4,7 @@ export const breadcrumbSlices = createSlice({
   name: 'breadcrumbSlices',
   initialState: {
     currentname: "",
-    previousname:""
+    previousname:"",
   },
   reducers: {
     pageName: (state,action) => {

@@ -11,7 +11,7 @@ import {FaAngleRight} from 'react-icons/fa'
 const CheckOut = () => {
    
 
-    const pageName = useSelector((state)=>state.breadcrumbSlices.currentname)
+    const pageName = useSelector((state)=>state.breadcrumbSlices.previousname)
 
 
   return (

@@ -8,18 +8,21 @@ import {FaShoppingCart} from 'react-icons/fa'
 import {AiOutlineSearch} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
+import breadcrumbSlices from '../../slice/breadcrumbSlices'
+import { pageName } from '../../slice/breadcrumbSlices'
+
 
 
 const Searchber = () => {
     
+   
     let dispatch = useDispatch()
 
-     
     let handlebreadcrumb = (name)=>{
-        //  dispatch(pageName(name))
+         dispatch(pageName(name))
         console.log(name)
     }
-    
+
   return (
     <section className='bg-ash py-10 mb-32'>
         <Container>

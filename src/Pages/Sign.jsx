@@ -17,7 +17,7 @@ import {FaAngleRight} from 'react-icons/fa'
 const Sign = () => {
    
 
-  const pageName = useSelector((state)=>state.breadcrumbSlices.currentname)
+  const pageName = useSelector((state)=>state.breadcrumbSlices.previousname)
     
 
   return (
