@@ -21,7 +21,7 @@ const LogIn = () => {
         <Link to={pageName == "Home" ? "/" :`/${pageName.toLowerCase()}`}>
             {pageName}
         </Link>
-          <FaAngleRight className='mt-[5px]'/>
+          <FaAngleRight className='mt-[7px]'/>
         <p className='first-letter:uppercase ml-2' > {window.location.pathname.replace("/", "".replace("-", " "))}</p>
         </Flex>
         <p className='font-dm font-normal text-base max-w-644 my-36 text-pera'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>

@@ -42,8 +42,8 @@ const Navber = () => {
                 <Link onClick={()=> handlebreadcrumb("Contucts")} to="/Contucts">
                     <List text="Contucts"/>
                 </Link>
-                <Link onClick={()=> handlebreadcrumb("log-in")} to="/log-in">
-                    <List text="log in"/>
+                <Link onClick={()=> handlebreadcrumb("Log-in")} to="/log-in">
+                    <List text="Log in"/>
                 </Link>
             </ul>
         </Flex>

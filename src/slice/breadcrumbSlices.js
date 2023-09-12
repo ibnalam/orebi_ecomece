@@ -3,7 +3,8 @@ import { createSlice } from '@reduxjs/toolkit'
 export const breadcrumbSlices = createSlice({
   name: 'breadcrumbSlices',
   initialState: {
-    name: "",
+    currentname: "",
+    previousname:""
   },
   reducers: {
     pageName: (state,action) => {
