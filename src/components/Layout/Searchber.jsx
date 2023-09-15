@@ -21,7 +21,7 @@ const Searchber = () => {
     let handlebreadcrumb = (name)=>{
          dispatch(pageName(name))
         console.log(name)
-    }
+    }               
 
   return (
     <section className='bg-ash py-10 mb-32'>
@@ -37,7 +37,7 @@ const Searchber = () => {
                 </div>
                 <Flex className='w-1/5 gap-x-10 justify-end items-center'>
                     <Flex>
-                    <Link onClick={()=> handlebreadcrumb("Sign up")} to="/sign-up">
+                    <Link onClick={()=> handlebreadcrumb("Signup")} to="/signup">
                         <CiUser/>
                     </Link>
                     <GoTriangleDown/>

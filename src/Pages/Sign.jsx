@@ -25,8 +25,8 @@ const Sign = () => {
     <Container>
         <SubHeading text="Sign Up"/>
         <Flex className="mt-3">
-        <Link className='mr-2' to={pageName == "Home" ? "/" : `/${pageName.toLowerCase()}`}> {pageName}</Link> <FaAngleRight className='mt-[5px]'/>
-        <p className='first-letter:uppercase ml-2'>{window.location.pathname.replace("/","").replace("-"," ")}</p>
+        <Link className='mr-2' to={pageName=="Home"?"/":`/${pageName.toLowerCase()}`}>{pageName}</Link> <FaAngleRight className='mt-[5px]'/>
+        <p className='first-letter:uppercase ml-2'>{window.location.pathname.replace("/","")}</p>
         </Flex>
 
         <p className='font-dm font-normal text-base max-w-644 my-36 text-pera'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>

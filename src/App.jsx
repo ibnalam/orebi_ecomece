@@ -50,7 +50,7 @@ const router = createBrowserRouter(
     >
   </Route>
   <Route
-        path="/sign-up"
+        path="/signup"
         element={<Sign />}
     >
   </Route>
