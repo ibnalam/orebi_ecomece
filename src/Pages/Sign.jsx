@@ -32,7 +32,7 @@ const Sign = () => {
         <p className='font-dm font-normal text-base max-w-644 my-36 text-pera'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the.</p>
 
         <div className='border-t border-solid border-line'>
-          <SubHeading text="Your Personal Details" className="pt-14"/>
+          <SubHeading text="Your Personal Details" className="pt-14"/>         
           <Flex className="flex-wrap justify-between">
             <div className='w-48'>
             <InputForm title="First Name" placeholder="First Name" type="text"/>

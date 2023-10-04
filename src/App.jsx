@@ -19,13 +19,13 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Test from "./components/Test"
 import Rootlayout from "./components/Rootlayout"
 import ErrorPage from "./Pages/ErrorPage"
 import Sign from "./Pages/Sign"
 import LogIn from "./Pages/LogIn"
 import Contucts from "./Pages/Contucts"
 import CheckOut from "./Pages/CheckOut"
+import Home from "./components/Home"
 
 
 
@@ -41,7 +41,7 @@ const router = createBrowserRouter(
 
     <Route
         path="/"
-        element={<Test />}
+        element={<Home />}
         >
     </Route>
     <Route

@@ -11,7 +11,7 @@ import { pageName } from '../../slice/breadcrumbSlices'
 const Navber = () => {
 
     
-
+    
     let dispatch = useDispatch()
        let handlebreadcrumb = (name)=>{
         dispatch(pageName(name))
