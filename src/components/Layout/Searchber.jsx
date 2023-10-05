@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Flex from '../Flex'
 import {FaBars} from 'react-icons/fa'
 import {ImCross} from 'react-icons/im'
+import {RxCross1} from 'react-icons/rx'
 import {CiUser} from 'react-icons/ci'
 import {GoTriangleDown} from 'react-icons/go'
 import {FaShoppingCart} from 'react-icons/fa'
@@ -14,6 +15,9 @@ import { pageName } from '../../slice/breadcrumbSlices'
 import { Increment } from '../../slice/cartSlices'
 import { Decrement } from '../../slice/cartSlices'
 import { RemoveCart } from '../../slice/cartSlices'
+import { sidecart } from '../../slice/cartSlices'
+import { remove } from '../../slice/cartSlices'
+import Image from '../Image'
 
 
 
@@ -21,8 +25,9 @@ import { RemoveCart } from '../../slice/cartSlices'
 const Searchber = () => {
 
     let [open, setopen] = useState(false);
+    // let [open2, setopen2] = useState(false);
     let [total, settotal] = useState(0);
-    
+    let popupcart = useSelector(state=>state.cart.openitem)
    
     let dispatch = useDispatch()
 
@@ -41,6 +46,9 @@ const Searchber = () => {
     let handleIncrement = (item) => {
         // console.log(item)
         dispatch(Increment(item))
+    }
+    let handleremove = (item)=>{
+        dispatch(remove(item)) 
     }
 
     useEffect(()=>{
@@ -74,17 +82,17 @@ const Searchber = () => {
                     <GoTriangleDown/>
                     </Flex>
                     {/* <Link onClick={()=> handlebreadcrumb("Checkout")} to="/checkout"> */}
-                         <FaShoppingCart onClick={()=> setopen(true)}/> {cart.length}
+                         <FaShoppingCart  onClick={()=>dispatch(sidecart(true))} className='cursor-pointer'/> {cart.length}
                     {/* </Link> */}
                 </Flex>
             </Flex>
-            {open && 
+            {popupcart && 
             <div className='w-2/5 bg-[#A8A8A8] text-white h-screen absolute top-0 right-0 z-10'>
-                 <div className='text-black px-5 py-5 text-[25px]'>
-                 <ImCross onClick={()=> setopen(false)}/>
-                 </div>
+                
+                 <ImCross onClick={()=>dispatch(sidecart(false))} className='cursor-pointer ml-[15px] mt-[15px] mb-[15px]'/>
+                
                  <ul className='flex justify-between text-black bg-ash py-5'>
-                    <li >Product</li>
+                    <li className=''>Product</li>
                     <li>Price</li>
                     <li>Quantity</li>
                     <li>Total</li>
@@ -94,17 +102,19 @@ const Searchber = () => {
                  cart.map(item => (
                     <ul className='flex justify-between border-b border-solid border-white py-5'>
                            <li>
-                               <button onClick={()=> dispatch(RemoveCart(item))}>
-                                   <ImCross/>
+                               <button>
+                                   <RxCross1  onClick={ ()=> handleremove(item)}/>
                                </button>
                            </li>
-                           {/* <li>{item.image}</li> */}
+                           <li>
+                            <Image src={item.image} className="w-[40px] h-[50px]"/>
+                           </li>
                            <li>{item.title} </li>
                            <li>{item.price}</li>
                            <li className='border border-white border-solid'>
-                               <button onClick={()=> handleDecrement(item)} className='mr-[10px]'>-</button>
+                               <button onClick={()=> handleDecrement(item)} className='mr-[20px]'>-</button>
                                    {item.quantity}
-                               <button onClick={()=> handleIncrement(item)} className='ml-[10px]'>+</button>
+                               <button onClick={()=> handleIncrement(item)} className='ml-[20px]'>+</button>
                            </li>
                            <li>{item.price*item.quantity}</li>                
                     </ul>
