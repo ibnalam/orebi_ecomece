@@ -14,7 +14,6 @@ import breadcrumbSlices from '../../slice/breadcrumbSlices'
 import { pageName } from '../../slice/breadcrumbSlices'
 import { Increment } from '../../slice/cartSlices'
 import { Decrement } from '../../slice/cartSlices'
-import { RemoveCart } from '../../slice/cartSlices'
 import { sidecart } from '../../slice/cartSlices'
 import { remove } from '../../slice/cartSlices'
 import Image from '../Image'
@@ -43,16 +42,17 @@ const Searchber = () => {
         // console.log(item)
         dispatch(Decrement(item))
     }
+
     let handleIncrement = (item) => {
-        // console.log(item)
+        // console.log(item)                                                                               
         dispatch(Increment(item))
     }
+
     let handleremove = (item)=>{
         dispatch(remove(item)) 
     }
 
     useEffect(()=>{
-
         let total  = 0
         cart.map(item=> {
             total+=item.price*item.quantity
@@ -63,7 +63,7 @@ const Searchber = () => {
 
 
   return (
-    <section className='bg-ash py-10 mb-32'>
+    <section className='bg-ash py-10'>
         <Container>
             <Flex>
                <Flex className='w-1/5 items-center gap-x-2.5'>              
@@ -107,7 +107,7 @@ const Searchber = () => {
                                </button>
                            </li>
                            <li>
-                            <Image src={item.image} className="w-[40px] h-[50px]"/>
+                            <Image src={item.image} className="w-[40px] h-[50px] "/>
                            </li>
                            <li>{item.title} </li>
                            <li>{item.price}</li>
@@ -123,7 +123,7 @@ const Searchber = () => {
                 <h2 className='text-white'>Cart Is Empty</h2>
 
                 }
-                <h3 className='text-white absolute bottom-0'>Total : 
+                <h3 className='text-white absolute bottom-0'>Total :   
                     {total}
                  </h3>
                     

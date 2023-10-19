@@ -5,8 +5,8 @@ const NextArrow = (props) => {
     const { className, style, onClick } = props;
     return (
       <div
-      className={`flex bg-[#979797] w-16 h-16 rounded-full inline-block justify-center items-center text-white cursor-pointer ${className}`}
-    //   style={{ ...style, display: "inline-block", background: "green" }}
+      className={`flex justify-center items-center w-16 h-16 rounded-full bg-[#979797] cursor-pointer ${props.class}`}
+      // style={{ ...style, display: "inline-block", background: "green" }}
       onClick={onClick}
     >
         <BsArrowRight className={`${className}`}/>
