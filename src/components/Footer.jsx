@@ -8,10 +8,12 @@ import List from './List'
 import {BiLogoFacebook} from 'react-icons/bi'
 import {BiLogoLinkedin} from 'react-icons/bi'
 import {AiOutlineInstagram} from 'react-icons/ai'
+import FooterBottom from './FooterBottom'
 
 
 const Footer = () => {
   return (
+    <>
     <footer className='bg-ash py-14 mt-36'>
         <Container>
             <Flex>
@@ -62,12 +64,14 @@ const Footer = () => {
                     <BiLogoLinkedin/>
                     <AiOutlineInstagram/>
                 </Flex>
-                <div className='w-1/2'> 
-                    <p className='font-dm font-normal text-sm text-right'>2020 Orebi Minimal eCommerce Figma Template by Adveits</p>
-                </div>
+                
             </Flex>
         </Container>
+       
     </footer>
+    <FooterBottom/>
+    </>
+    
   )
 }
 

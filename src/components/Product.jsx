@@ -14,10 +14,6 @@ import { sidecart } from '../slice/cartSlices'
 
 
 
-
-
-// 
-
 const Product = ({heading, className,image,price,badge}) => {
   let dispatch = useDispatch()
   let handlecart =()=> {

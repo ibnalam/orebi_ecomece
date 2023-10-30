@@ -34,6 +34,7 @@ import productOfTheYear from '../../src/assets/productOfTheYear.webp'
 import Slider from "react-slick";
 import PrevArrow from '../components/PrevArrow'
 import NextArrow from '../components/NextArrow'
+import BannerBottom from './BannerBottom'
 // import { useDispatch } from 'react-redux'
 
 const Home = () => {
@@ -44,8 +45,8 @@ const Home = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    prevArrow: <PrevArrow class="absolute top-1/2 -translate-y-1/2 left-0 z-30"/>,
-    nextArrow: <NextArrow class="absolute top-1/2 -translate-y-1/2 right-0 z-30"/>,
+    prevArrow: <PrevArrow class="absolute top-1/2 -translate-y-1/2 left-[10px] z-30"/>,
+    nextArrow: <NextArrow class="absolute top-1/2 -translate-y-1/2 right-[10px] z-30"/>,
   };
 
   const bannersettings = {
@@ -63,12 +64,12 @@ const Home = () => {
     appendDots: (dots) => (
       <div
         style={{
-          position: "absolute",
+          position: "absolute", 
           top: "50%",
           left: "7%",
           transform: "translateY(-50%)",
         }}
-      >
+    >
         <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
     ),
@@ -88,7 +89,7 @@ const Home = () => {
                 borderRight: "5px blue solid",
                 padding: "8px 0",
                 cursor: "pointer",
-              }
+              }    
         }
       >
         0{i + 1}
@@ -114,8 +115,8 @@ const Home = () => {
   //   padding: "8px 0",
   //  }
   // borderRight: dotActive == 0 ? 'red' : 'green',
-  //               borderRight: dotActive == 1 ? 'green' : 'gray',
-                // borderRight: dotActive == 2 ? 'gray' : 'red',
+  // borderRight: dotActive == 1 ? 'green' : 'gray',
+  // borderRight: dotActive == 2 ? 'gray' : 'red',
 
 
 
@@ -124,21 +125,22 @@ const Home = () => {
 
 <>
 
-<Slider {...bannersettings}>
-          <div>
-            <Image src={bannerImgOne}/>
-          </div>
-          <div>
-            <Image src={bannerImgTwo}/>
-          </div>
-          <div>
-            <Image src={bannerImgThree}/>
-          </div>
+        <Slider {...bannersettings}>
+            <div>
+              <Image src={bannerImgOne}/>
+            </div>
+            <div>
+              <Image src={bannerImgTwo}/>
+            </div>
+            <div>
+              <Image src={bannerImgThree}/>
+            </div> 
         </Slider>
 <Container>
+      <BannerBottom/>
 
 
-      <Flex className="gap-x-6">
+      <Flex className="gap-x-6 mt-[140px]">
         <div className='w-1/2'>
             <Image src={saleImgOne} className="w-full"/>
         </div>
@@ -149,8 +151,9 @@ const Home = () => {
       </Flex>
 
 
+
   
-      <SubHeading text="New Ariivals"/>
+      <SubHeading text="New Ariivals" className="mt-[140px] mb-[48px]"/>
 
       <Slider {...settings}>
       <div className='w-23'>
@@ -170,16 +173,10 @@ const Home = () => {
         </div>
         </Slider>
 
-        <div>
-          <Image src={productOfTheYear}/>
-        </div>
 
+        <SubHeading text="Our Bestsellers" className="mt-[140px]"/>
 
-
-
-        <SubHeading text="Our Bestsellers"/>
-
-          <Flex className="justify-between">
+          <Flex className="justify-between mt-[48px]">
             <div className='w-23'>
               <Product heading="product 1" image={bestSellerOne}/>
             </div>
@@ -195,9 +192,22 @@ const Home = () => {
           </Flex>
 
 
-        <SubHeading text="Special Offers"/>
 
-          <Flex className="justify-between">
+
+
+        <div className='mt-[120px]'>
+          <Image src={productOfTheYear}/>
+        </div>
+
+
+
+
+        
+
+
+        <SubHeading text="Special Offers" className="mt-[140px] "/>
+
+          <Flex className="justify-between mt-[48px]">
             <div className='w-23'>
               <Product heading="product 1" image={spfOne}/>
             </div>

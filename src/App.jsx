@@ -26,6 +26,7 @@ import LogIn from "./Pages/LogIn"
 import Contucts from "./Pages/Contucts"
 import CheckOut from "./Pages/CheckOut"
 import Home from "./components/Home"
+import Shop from "./components/Shop"
 
 
 
@@ -46,7 +47,7 @@ const router = createBrowserRouter(
     </Route>
     <Route
         path="/shop"
-        element={<Product />}
+        element={<Shop />}
     >
   </Route>
   <Route
