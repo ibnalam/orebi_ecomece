@@ -12,7 +12,7 @@ const FooterBottom = () => {
           Copyright 2023 | Orebi | All Rights Reserved | 
           <a href="https://reactbd.com/" target="_blank" rel="noreferrer">
             <span className="ml-1 mt-2 font-medium group-hover:text-primeColor">
-              Powered by <span className="text-[40px] text-red-500">Shawon Islam</span>
+              Powered by <span className="text-[30px] text-red-500">IBN ALAM</span>
             </span>
           </a>
         </p>

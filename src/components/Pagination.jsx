@@ -386,12 +386,12 @@ function Items({ currentItems }) {
       {currentItems &&
         currentItems.map((item, index) => (
           <div>
-            <Product image={spfFour} heading={item.name + index}/>
+            <Product image={spfFour} heading={item.name + index}/>6
           </div>
         ))}
     </>
   );
-}
+}  
 
 function Pagination({ itemsPerPage }) {
     let [pageNum, setpageNum] = useState(1)
@@ -408,6 +408,10 @@ function Pagination({ itemsPerPage }) {
     console.log(
       `User requested page number ${event.selected}, which is offset ${newOffset}`
     );
+
+
+
+    
     setItemOffset(newOffset);
   };
 
